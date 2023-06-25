@@ -1,0 +1,50 @@
+@import './assets/scss/styles.scss';
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: $yellow;
+  text-align: center;
+}
+
+.App-header {
+  background-color: #4F4D5A;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    position: relative;
+    background: #9b99a5;
+    height: 70vh;
+    width: 80%;
+
+    .header-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content > img:first-child {
+    opacity: 0.6;
+  }
+}
+

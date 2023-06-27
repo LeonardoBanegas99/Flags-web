@@ -1,0 +1,19 @@
+.menu-food-item {
+
+  .content {
+    background-color: #F3F4F5;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .item-text-content {
+      text-align: justify;
+    }
+  }
+}

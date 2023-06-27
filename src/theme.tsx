@@ -16,13 +16,13 @@ declare module '@mui/material/styles/createPalette' {
   }
 }
 
-const black = "#231F20";
-const darkGrey = "#4F4D5A";
-const orange = "#D88F29";
-const yellow = "#F1C32F";
-const mustard = "#DAA628";
-const pink = "#F0C0AD";
-const white = "#F3F4F5";
+const black = `#231F20`;
+const darkGrey = `#4F4D5A`;
+const orange = `#D88F29`;
+const yellow = `#F1C32F`;
+const mustard = `#DAA628`;
+const pink = `#F0C0AD`;
+const white = `#F3F4F5`;
 
 export const theme = createTheme({
   palette: {
@@ -38,6 +38,13 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: "'Raleway', 'sans-serif'",
+    h4: {
+      fontWeight: 600,
+    },
+    body2: {
+      fontWeight: 600,
+      marginRight: '20px',
+    }
   }
 });
 

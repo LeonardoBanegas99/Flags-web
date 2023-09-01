@@ -42,7 +42,7 @@ const ImageGridItem = (props: ImageGridItemProps) => {
     <>
       <Grid item md={6} className='image-item'>
         <animated.div style={springProps}>
-          <img className='food-ima ge' src={src} style={style} />
+          <img className='food-image' src={src} style={style} />
           <img className={`flag-image ${isEven ? 'even' : 'odd'}`} src={flag} />
         </animated.div>
 

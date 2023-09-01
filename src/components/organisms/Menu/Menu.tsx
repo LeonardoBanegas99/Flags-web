@@ -49,10 +49,10 @@ const Menu = () => {
     const menuVisibleItems = menuItems[menuTypeSelected as keyof typeof menuItems]
     return (
       <Grid container justifyContent='center'>
-        {menuVisibleItems.map(({name, price, description, image}, index) => {
+        {menuVisibleItems.map(({name, price, description, image, flag}, index) => {
           return (
             <>
-              <MenuFoodItem src={image} title={name} subtitle={`${price} Lps.`} description={description} sm={10} md={6} lg={5} xl={4} key={index}/>
+              <MenuFoodItem src={image} title={name} subtitle={`${price} Lps.`} description={description} sm={10} md={10} lg={10} xl={6} index={index} flag={flag}/>
             </>
           )
         })}

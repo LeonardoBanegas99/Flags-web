@@ -1,9 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/styles/createPalette' {
-  //interface PaletteCustomColor {
 
-  //}
 
   interface CommonColors {
     black: string;
@@ -38,50 +36,17 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: "'Raleway', 'sans-serif'",
+    subtitle1: {
+      color: white,
+    },
     h4: {
       fontWeight: 600,
+      color: white,
     },
     body2: {
       fontWeight: 600,
-      marginRight: '20px',
+      //marginRight: '20px',
+      color: white,
     }
   }
 });
-
-
-/**
- black: { 
-      main: '#231F20',
-    },
-    darkGrey: { 
-      main: '#4F4D5A',
-    },
-    orange: { 
-      main: '#D88F29',
-    },
-    yellow: { 
-      main: '#F1C32F',
-    },
-    mustard: { 
-      main: '#DAA628',
-    },
-    pink: { 
-      main: '#F0C0AD',
-    },
-    white: { 
-      main: '#F3F4F5',
-    },
-
-
-    [
-      {black: '#231F20'},
-      {darkGrey: '#4F4D5A'},
-      {orange: '#D88F29'},
-      {yellow: '#F1C32F'},
-      {mustard: '#DAA628'},
-      {pink: '#F0C0AD'},
-      {white: '#F3F4F5'},
-    ]
-
-
- */

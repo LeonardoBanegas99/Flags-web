@@ -13,7 +13,8 @@ export interface MenuFoodItemProps {
   md: GridSize;
   lg: GridSize;
   xl: GridSize;
-  key: number;
+  index: number;
+  flag?: string;
 }
 
 const MenuFoodItem = (props: MenuFoodItemProps) => {
@@ -27,15 +28,37 @@ const MenuFoodItem = (props: MenuFoodItemProps) => {
     md,
     lg,
     xl,
-    key
+    index,
+    flag,
   } = props;
 
+  const renderImage = () => {
+    return (
+      <ImageGridItem src={src} index={index} flag={flag}/>
+    );
+  }
+
+  const renderDetails = () => {
+    return (
+      <ImageItemDetails title={title} subtitle={subtitle} description={description} index={index}/>
+    );
+  }
+
   return (
-    <Grid item className='menu-food-item' key={`menu-food-item-${key}`} sm={sm} md={md} lg={lg} xl={xl}>
-      <div className='content'>
-        <ImageGridItem src={src} />
-        <ImageItemDetails title={title} subtitle={subtitle} description={description} />
-      </div>
+    <Grid item className='menu-food-item' key={`menu-food-item-${index}`} sm={sm} md={md} lg={lg} xl={xl}>
+      <Grid container className='content' justifyContent='center'>
+        {index % 2 === 0 ?
+          <>
+            {renderImage()}
+            {renderDetails()}
+          </>
+          :
+          <>
+            {renderDetails()}
+            {renderImage()}
+          </>
+        }
+      </Grid>
     </Grid>
   )
 }
